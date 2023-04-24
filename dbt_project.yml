@@ -1,15 +1,15 @@
-name: 'DBT_DEMO_01'
-config-version: 2
 version: 2.0
-description: DBT POC
-repository: https://github.com/ashimachanpuriya/dbt_demp_01.git
-
+config-version: 2
+name: shop
 profile: my-snowflake-db
 
+
+model-paths:
+  - "models"
+  - "data"
+
+target-path: "target"
+   
 models:
-  my_first_dbt_model:
-    materialized: table
-    schema: PUBLIC
-    root-paths: ["models/"]
-
-
+  shop:
+    +materialized: table
