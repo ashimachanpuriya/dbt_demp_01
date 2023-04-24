@@ -1,0 +1,18 @@
+my-snowflake-db:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: https://app.snowflake.com/ap-southeast-1/de37821/w3omMx6xVJw#query
+
+      # User/password auth
+      user: nikhil15
+      password: Htek@#1027
+
+      role: ACCOUNTADMIN
+      database: TEST_DBT
+      warehouse: COMPUTE_WH
+      schema: PUBLIC
+      threads: 1
+      
+      connect_timeout: 10 
